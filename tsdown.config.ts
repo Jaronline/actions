@@ -7,6 +7,9 @@ const baseOptions: UserConfig = {
 
 export default [
 	defineConfig({
-		...baseOptions
+		...baseOptions,
+		tsconfig: 'semver/tsconfig.json',
+		entry: ['semver/src/semver.mts'],
+		outDir: 'semver/dist/'
 	})
 ];

@@ -1,0 +1,26 @@
+name: 'Semver'
+description: 'Determines the properties of a semantic version'
+inputs:
+  version:
+    description: 'The full semantic version number to check'
+    required: true
+outputs:
+  version:
+    description: 'The normal version number that has been detected'
+  major:
+    description: 'The major version number that has been detected'
+  minor:
+    description: 'The minor version number that has been detected'
+  patch:
+    description: 'The patch version number that has been detected'
+  prerelease:
+    description: 'The prerelease version that has been detected, if any'
+  prerelease-identifiers:
+    description: 'Array of prerelease identifiers that have been detected'
+  build:
+    description: 'The build metadata detected, if any'
+  build-identifiers:
+    description: 'Array of build metadata identifiers that have been detected'
+runs:
+  using: node24
+  main: dist/semver.mjs
