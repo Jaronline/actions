@@ -1,0 +1,4 @@
+export default {
+	'*': 'prettier --ignore-unknown --write',
+	'*.{mjs,js,ts}': 'eslint --fix --ext mjs,js,ts,mts'
+};
